@@ -1,0 +1,333 @@
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+header {
+    background: #dcdcdc;
+    padding: 10px 20px;
+    text-align: center;
+    background: #7eb6ff;
+    background: linear-gradient(to right, #7eb6ff, #a5d8ff);
+    color: #fff;
+  }
+
+/*導覽*/  
+nav {
+    margin-top: 5px;
+  }
+  
+nav a {
+    margin: 0 10px;
+    color: #f9f9f9;
+    font-weight: 500;
+  }
+
+nav a:hover {
+    color: #004e9a;
+  }
+
+/*背景音樂*/
+.bg-music {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 260px;
+    z-index: 1000;
+    background-color: #ffffffd0;
+    border: 1px solid #b0c4de;
+    border-radius: 8px;
+    padding: 5px;
+  }
+  
+
+main {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+aside, section {
+    border: 1px solid #999;
+    padding: 10px;
+    flex: 1;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 60, 150, 0.08);
+    border: 1px solid #d0e4ff;
+  }
+
+
+/*左*/
+aside#about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/*個人照*/
+.photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid #4b6cb7;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*slogan*/
+  .slogan {
+    position: absolute;
+    top: 60px;
+    left: 230px;
+    max-width: 400px;
+    color: #2b4ea2;
+    font-size: 25px;
+    line-height: 1.6;
+  }
+  
+  
+/*基本資料*/
+.basic-info {
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 2;
+}
+
+/*個人簡介*/
+.intro {
+  margin-bottom: 10px;
+  width: 93.5%;
+  background: #ffffff;
+  border: 1px solid #d0e4ff;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.intro h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2b4ea2;
+  font-weight: 700;
+}
+
+.intro p {
+  margin: 0;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+
+/* 中 程式技能*/
+#skills {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+#skills h2 {
+  color: #2c6fc0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skill {
+  margin: 15px 0;
+}
+
+.skill span {
+  display: block;
+  font-weight: 600;
+  color: #004080;
+  margin-bottom: 5px;
+}
+
+.bar {
+  width: 100%;
+  height: 14px;
+  background: #e0ecff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.bar:hover {
+  transform: scale(1.05);
+}
+
+.fill {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #7eb6ff, #4b6cb7);
+}
+
+.fill.html { width: 90%; }
+.fill.python { width: 75%; }
+.fill.c { width: 55%; }
+.fill.java { width: 40%; }
+
+.bar:hover .fill {
+  filter: brightness(1.2);
+  transform: scaleY(1.1);
+}
+  
+/*專案*/
+#projects {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.proj-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8faff;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #d0e4ff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding:1px 10px;
+}
+
+.proj-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.proj-item img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-left: 15px;
+}
+
+.proj-text {
+  flex: 1;
+}
+
+.proj-text h3 {
+  color: #2b4ea2;
+  margin-bottom: 5px;
+}
+
+.proj-text a {
+  color: #2b4ea2;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.proj-text a:hover {
+  text-decoration: underline;
+}
+
+
+/*右*/
+aside#experience {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/*個人經歷*/
+.exp-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8faff;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #d0e4ff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.exp-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.exp-item img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.exp-text {
+  flex: 1;
+}
+
+.exp-text h3 {
+  color: #2b4ea2;
+  margin-bottom: 5px;
+}
+
+.exp-text a {
+  color: #2b4ea2;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.exp-text a:hover {
+  text-decoration: underline;
+}
+
+/*聯絡資訊*/
+.contact-info {
+  background: #ffffff;
+  border: 1px solid #d0e4ff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 10px;
+  background: #a5d8ff;
+  color: #003f82;
+  letter-spacing: 1px;
+}  
+
+
+/*手機*/
+  @media (max-width: 900px) {
+    main {
+      flex-direction: column;
+    }
+  
+    aside, section {
+      flex: none;
+      width: 100%;
+    }
+  
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .circle {
+      width: 60px;
+      height: 60px;
+    }
+  }
